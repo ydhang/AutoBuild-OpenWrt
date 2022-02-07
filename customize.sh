@@ -21,4 +21,4 @@ rm openwrt/package/lean/luci-theme-argon -rf
 git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git openwrt/package/lean
 
 #5. Change the default theme
-sed -i 's/sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' openwrt/feeds/luci/collections/luci/Makefile
+sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' openwrt/feeds/luci/collections/luci/Makefile
