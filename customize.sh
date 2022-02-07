@@ -18,7 +18,6 @@ sed -i 's/R22.1.1/R22.1.1 Compiled by ydhang/g' openwrt/package/lean/default-set
 rm openwrt/package/lean/luci-theme-argon -rf
 
 #4. Install JerryKuKu’s new Argon
-mkdir openwrt/package/lean/luci-theme-argon
 git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git openwrt/package/lean/luci-theme-argon
 
 #5. Change the default theme
