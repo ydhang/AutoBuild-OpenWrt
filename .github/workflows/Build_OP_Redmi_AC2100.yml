@@ -87,7 +87,7 @@ jobs:
 
     - name: Configuration Customization - Build_Redmi_AC2100
       env:
-        CONFIG_FILE: 'Redmi_AC2100.config'
+        CONFIG_FILE: 'redmi_ac2100.config'
         THEME_NAME: 'luci-theme-argon'
         ICO_FILE: 'favicon.ico'
       run: |
