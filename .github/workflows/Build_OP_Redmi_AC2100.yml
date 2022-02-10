@@ -90,10 +90,12 @@ jobs:
         CONFIG_FILE: 'redmi_ac2100.config'
         THEME_NAME: 'luci-theme-argon'
         ICO_FILE: 'favicon.ico'
+        OVERC_FILE: '1000Hz.patch'
       run: |
         [ -e $CONFIG_FILE ] && mv $CONFIG_FILE openwrt/.config
         chmod +x ./customize.sh && ./customize.sh
         [ -e $ICO_FILE ] && mv -f $ICO_FILE openwrt/package/lean/$THEME_NAME/htdocs/luci-static/argon/favicon.ico
+        [ -e $OVERC_FILE ] && mv -f $OVERC_FILE openwrt/target/linux/ramips/patches-5.4/102-mt7621-fix-cpu-clk-add-clkdev.patch
         cd openwrt && make defconfig
         
     - name: Download package
