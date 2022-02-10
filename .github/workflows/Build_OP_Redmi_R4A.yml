@@ -92,7 +92,7 @@ jobs:
         ICO_FILE: 'favicon.ico'
         MOD1_FILE: 'mt7621.mk'
         MOD2_FILE: 'mt7621_xiaomi_mi-router-4a-3g-v2.dtsi'
-        OVERC_FILE: '1000Hz.path'
+        OVERC_FILE: '1000Hz.patch'
       run: |
         [ -e $CONFIG_FILE ] && mv $CONFIG_FILE openwrt/.config
         chmod +x ./customize.sh && ./customize.sh
