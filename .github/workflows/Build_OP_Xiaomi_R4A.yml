@@ -87,7 +87,7 @@ jobs:
 
     - name: Configuration Customization - Build_Xiaomi_R4A
       env:
-        CONFIG_FILE: 'redmi_4a_ge.config'
+        CONFIG_FILE: 'xiaomi_r4a.config'
         THEME_NAME: 'luci-theme-argon'
         ICO_FILE: 'favicon.ico'
         MOD1_FILE: 'mt7621.mk'
