@@ -12,7 +12,7 @@
 sed -i 's/$1$V4UetPzk$CYXluq4wUazHjmCDBCqXF.//g' openwrt/package/lean/default-settings/files/zzz-default-settings
 
 #3. Modify the Compiler
-sed -i 's/R22.1.1/R22.1.1 Compiled by ydhang/g' openwrt/package/lean/default-settings/files/zzz-default-settings
+sed -i 's/R22.2.2/R22.2.2 Compiled by ydhang/g' openwrt/package/lean/default-settings/files/zzz-default-settings
 
 #3. Replace with Argon
 #rm openwrt/package/lean/luci-theme-argon -rf
