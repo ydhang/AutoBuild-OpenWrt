@@ -14,11 +14,9 @@ sed -i 's/$1$V4UetPzk$CYXluq4wUazHjmCDBCqXF.//g' openwrt/package/lean/default-se
 #3. Modify the Compiler
 sed -i 's/R22.2.2/R22.2.2 Compiled by ydhang/g' openwrt/package/lean/default-settings/files/zzz-default-settings
 
-#3. Replace with Argon
-#rm openwrt/package/lean/luci-theme-argon -rf
-
-#4. Install JerryKuKu’s new Argon
-#git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git openwrt/package/lean/luci-theme-argon
-
-#5. Change the default theme
+#4. Change the default theme
 sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' openwrt/feeds/luci/collections/luci/Makefile
+
+#5. Install JerryKuKu’s new Argon
+#rm openwrt/package/lean/luci-theme-argon -rf && git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git openwrt/package/lean/luci-theme-argon
+
