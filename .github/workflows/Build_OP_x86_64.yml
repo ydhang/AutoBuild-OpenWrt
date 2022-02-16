@@ -87,7 +87,7 @@ jobs:
 
     - name: Configuration Customization - Build_x86_64
       env:
-        CONFIG_FILE: 'x86_64.config'
+        CONFIG_FILE: 'master_config'
         THEME_NAME: 'luci-theme-argon'
         ICO_FILE: 'favicon.ico'
       run: |
