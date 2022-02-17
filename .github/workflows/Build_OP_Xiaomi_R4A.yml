@@ -88,14 +88,11 @@ jobs:
     - name: Configuration Customization - Build_Xiaomi_R4A
       env:
         CONFIG_FILE: 'xiaomi_r4a.config'
-        THEME_NAME: 'luci-theme-argon'
-        ICO_FILE: 'favicon.ico'
         MOD1_FILE: 'mt7621.mk'
         MOD2_FILE: 'mt7621_xiaomi_mi-router-4a-3g-v2.dtsi'
       run: |
         [ -e $CONFIG_FILE ] && mv $CONFIG_FILE openwrt/.config
         chmod +x ./customize.sh && ./customize.sh
-        [ -e $ICO_FILE ] && mv -f $ICO_FILE openwrt/package/lean/$THEME_NAME/htdocs/luci-static/argon/$ICO_FILE
         [ -e $MOD1_FILE ] && mv -f $MOD1_FILE openwrt/target/linux/ramips/image/$MOD1_FILE
         [ -e $MOD2_FILE ] && mv -f $MOD2_FILE openwrt/target/linux/ramips/dts/$MOD2_FILE
         cd openwrt && make defconfig
