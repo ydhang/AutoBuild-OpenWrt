@@ -81,20 +81,22 @@ jobs:
     #    git clone https://github.com/xiaorouji/openwrt-passwall.git package/lienol
     #    git clone "your_github_link" package/"your_folder_name"      
 
-    - name: Import external feeds - JerryKuKu Argon
-      working-directory: ./openwrt
-      run: |
-        git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/luci-theme-argon-jerrykuku
+    #- name: Import external feeds - JerryKuKu Argon
+    #  working-directory: ./openwrt
+    #  run: |
+    #    git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/luci-theme-argon-jerrykuku
 
     - name: Configuration Customization - Build_x86_64
       env:
-        CONFIG_FILE: 'master_config'
-        THEME_NAME: 'luci-theme-argon'
+        CONFIG_FILE: 'x86_64.config'
+        THEME_NAME: 'luci-theme-neobird'
         ICO_FILE: 'favicon.ico'
       run: |
         [ -e $CONFIG_FILE ] && mv $CONFIG_FILE openwrt/.config
         chmod +x ./Customize_x86_64.sh && ./Customize_x86_64.sh
-        [ -e $ICO_FILE ] && mv -f $ICO_FILE openwrt/package/lean/$THEME_NAME/htdocs/luci-static/argon/favicon.ico
+        [ -e $ICO_FILE ] && mv -f $ICO_FILE openwrt/package/lean/$THEME_NAME/htdocs/luci-static/neobird/favicon.ico
+        [ -e $ICO_FILE ] && mv -f $ICO_FILE openwrt/package/lean/luci-theme-argon/htdocs/luci-static/argon/favicon.ico
+        sed -i 's/shadowsocksr/passwall/g' package/luci-theme-neobird/luasrc/view/themes/neobird/header.htm
         cd openwrt && make defconfig
         
     - name: Download package
