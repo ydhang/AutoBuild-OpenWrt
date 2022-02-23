@@ -20,3 +20,5 @@ sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' openwrt/feeds/luci/collection
 #5. Install JerryKuKu’s new Argon
 rm -rf openwrt/package/lean/luci-theme-argon && git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git openwrt/package/lean/luci-theme-argon
 
+#6. Install Luci-theme-neobird
+rm -rf openwrt/package/luci-theme-neobird && git clone https://github.com/thinktip/luci-theme-neobird.git openwrt/package/lean/luci-theme-neobird
