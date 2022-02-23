@@ -22,3 +22,4 @@ rm -rf openwrt/package/lean/luci-theme-argon && git clone -b 18.06 https://githu
 
 #6. Install Luci-theme-neobird
 rm -rf openwrt/package/luci-theme-neobird && git clone https://github.com/thinktip/luci-theme-neobird.git openwrt/package/lean/luci-theme-neobird
+sed -i 's/shadowsocksr/passwall/g' openwrt/package/lean/luci-theme-neobird/luasrc/view/themes/neobird/header.htm
