@@ -7,7 +7,7 @@
 
 name: Build_Xiaomi_R4A
 
-on: 
+#on: 
   #release:
   #  types: [published]
 
