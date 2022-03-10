@@ -8,8 +8,8 @@
 name: Build_x86_64
 
 on: 
-  release:
-    types: [published]
+  #release:
+  #  types: [published]
 
   #push:
   #  branches: 
@@ -18,8 +18,8 @@ on:
   #schedule:
   #  - cron: 0 8 * * 5
   
-  #watch:
-  #  types: [started]
+  watch:
+    types: [started]
 
 jobs:
   build:
